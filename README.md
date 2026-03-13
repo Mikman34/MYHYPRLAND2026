@@ -4,6 +4,7 @@ Bar & Desktop
 ----------------------------------------------------
 waybar — status bar with Catppuccin Mocha theme
 hyprland — your Wayland compositor/WM
+hyprpaper - for backgrounds
 
 Launchers & Menus
 ----------------------------------------------------
