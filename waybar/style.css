@@ -74,6 +74,7 @@ tooltip label {
 #bluetooth,
 #battery,
 #tray,
+#custom-arch,
 #custom-launcher,
 #custom-power {
   background-color: transparent;
@@ -92,38 +93,48 @@ tooltip label {
 }
 
 #workspaces button {
-  all: unset;
+  background: transparent;
   color: @overlay1;
   padding: 2px 8px;
   font-size: 22px;
   transition: all 0.15s ease;
   border: none;
-  outline: none;
   box-shadow: none;
+  outline: none;
   -gtk-outline-radius: 0;
 }
 
 #workspaces button:focus {
+  background: transparent;
   border: none;
-  outline: none;
   box-shadow: none;
+  outline: none;
   -gtk-outline-radius: 0;
 }
 
 #workspaces button:hover {
+  background: transparent;
   color: @text;
 }
 
 #workspaces button.active {
-  color: #a6e3a1;
+  background: transparent;
+  color: @mauve;
+  font-size: 24px;
   font-weight: bold;
 }
 
+#workspaces button.active label {
+  color: @mauve;
+}
+
 #workspaces button.urgent {
+  background: transparent;
   color: @red;
 }
 
 #workspaces button.empty {
+  background: transparent;
   color: @surface2;
 }
 
@@ -232,6 +243,35 @@ tooltip label {
   -gtk-icon-effect: highlight;
   background-color: @yellow;
   border-radius: 6px;
+}
+
+/* ── Custom: Arch ────────────────────────────────────────── */
+#custom-arch {
+  color: @blue;
+  background-color: @surface0;
+  font-size: 16px;
+  padding: 4px 10px 4px 10px;
+  border-radius: 8px;
+  min-width: 20px;
+}
+
+#custom-arch:hover {
+  background-color: @surface1;
+  color: @sapphire;
+}
+
+/* ── Custom: Arch ────────────────────────────────────────── */
+#custom-arch {
+  color: @blue;
+  background-color: @surface0;
+  font-size: 16px;
+  padding: 4px 10px 4px 10px;
+  border-radius: 8px;
+  min-width: 20px;
+}
+
+#custom-arch:hover {
+  background-color: @surface1;
 }
 
 /* ── Custom: Power ────────────────────────────────────────── */
