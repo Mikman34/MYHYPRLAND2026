@@ -1,0 +1,39 @@
+#!/bin/bash
+
+DATE=$(date +%Y-%m-%d_%H-%M)
+
+echo "Do you want to create a snapshot before updating?"
+echo "  [B] Snapshot / and /home"
+echo "  [R] Snapshot / only"
+echo "  [H] Snapshot /home only"
+echo "  [N] No snapshot, just update"
+read -rp "Choice: " choice
+
+case ${choice^^} in
+    B)
+        echo "Snapshotting / and /home..."
+        sudo btrfs subvolume snapshot -r / /.snapshots/root-$DATE
+        sudo btrfs subvolume snapshot -r /home /.snapshots/home-$DATE
+        echo "Snapshots done!"
+        ;;
+    R)
+        echo "Snapshotting /..."
+        sudo btrfs subvolume snapshot -r / /.snapshots/root-$DATE
+        echo "Snapshot done!"
+        ;;
+    H)
+        echo "Snapshotting /home..."
+        sudo btrfs subvolume snapshot -r /home /.snapshots/home-$DATE
+        echo "Snapshot done!"
+        ;;
+    N)
+        echo "Skipping snapshot..."
+        ;;
+    *)
+        echo "Invalid choice, aborting."
+        exit 1
+        ;;
+esac
+
+echo "Starting update..."
+sudo pacman -Syu
