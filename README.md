@@ -54,6 +54,8 @@ wl-clipboard
 
 The update file
 ----------------------------------------------------
-sudo vim /usr/local/bin/update
-sudo chmod +x /usr/local/bin/update
-Then just run update instead of sudo pacman -Syu!
+1 sudo vim /usr/local/bin/update
+
+2 sudo chmod +x /usr/local/bin/update
+
+3 Then just run update instead of sudo pacman -Syu!
