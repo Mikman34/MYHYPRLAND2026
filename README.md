@@ -51,3 +51,9 @@ jq — parses JSON output from hyprctl to get the active window position/size (n
 cliphist 
 
 wl-clipboard
+
+The update file
+----------------------------------------------------
+sudo vim /usr/local/bin/update
+sudo chmod +x /usr/local/bin/update
+Then just run update instead of sudo pacman -Syu!
