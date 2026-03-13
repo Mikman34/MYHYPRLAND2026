@@ -47,3 +47,7 @@ slurp — lets you select a region on screen with your mouse
 swappy — opens the screenshot for editing, annotating, saving or copying to clipboard
 
 jq — parses JSON output from hyprctl to get the active window position/size (needed for the window screenshot mode)
+
+cliphist 
+
+wl-clipboard
